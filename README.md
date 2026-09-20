@@ -211,4 +211,4 @@ safety rules.
 - Official INCOIS PFZ advisories and cyclone alerts
 - Offline mode and SMS / WhatsApp delivery for low-connectivity coasts
 - Live vessel positions from AIS or onboard trackers
-- Voice output in regional languages
+- Voice output in many more regional languages
