@@ -1,11 +1,29 @@
 # ORCA — Marine Intelligence Assistant
 
+**Team AQUA-AGENTS** · Smart India Hackathon 2026 · Problem Statement **SIH26176**
+
+**Live demo:** <https://orca-marine-psi.vercel.app/>
+
 ORCA is a multi-agent AI assistant built for Indian fishermen and coastal communities.
 It combines live marine and weather data with a set of specialist agents to answer one
 practical question: **"Is it safe to go out today, and where should I fish?"**
 
 Answers come with the data behind them (wave height, wind, sea temperature, zone
 checks), and the whole interface works in **11 Indian languages**.
+
+![ORCA dashboard with annotated features](docs/screenshots/01-dashboard.png)
+
+*Dashboard: live safety verdict, fishing-zone quality and telemetry for the selected harbour.*
+
+## Smart India Hackathon 2026
+
+| Field              | Details                                                  |
+| ------------------ | -------------------------------------------------------- |
+| Problem Statement  | SIH26176                                                 |
+| Title              | ORCA Marine EcOsystem Reasoning with Collaborative Agents |
+| Organization       | Indian Space Research Organisation (ISRO)                |
+| Category           | Software                                                 |
+| Team               | AQUA-AGENTS                                              |
 
 ## Problem
 
@@ -39,6 +57,40 @@ alerts into one conversational, multilingual interface.
 - **Resilient by design**: if Gemini is unavailable or rate-limited, a local agent
   engine still produces a complete answer from the same live data.
 
+## Screenshots
+
+### Unsafe-condition advisory
+When a storm or rough sea is detected, ORCA raises a critical advisory and tells the fisherman to stay ashore.
+
+![Unsafe advisory](docs/screenshots/02-unsafe-advisory.png)
+
+### Multi-agent AI advisor
+A planner agent decides which specialist agents (weather, marine, fisheries, geofence, route, risk) are needed for each question.
+
+![Agent chat](docs/screenshots/03-agent-chat.png)
+
+### Explainable answers
+Replies include species catch probability and a "Why this recommendation?" panel showing the rules applied.
+
+![Explainable answer](docs/screenshots/04-explainable-answer.png)
+
+### Coastal map and safe routes
+Live map of all 15 harbours with colour-coded safety, restricted zones, fishing zones and click-to-plan safe routes.
+
+![Coastal map](docs/screenshots/05-coastal-map.png)
+
+### Coastal fleet monitor
+Scan every harbour at once and compare wave, wind, sea temperature, storm warnings and fishing-zone ratings.
+
+![Fleet monitor](docs/screenshots/06-fleet-monitor.png)
+
+### Multilingual interface
+The interface is available in 11 Indian languages.
+
+![Languages](docs/screenshots/07-languages.png)
+
+Live demo: <https://orca-marine-psi.vercel.app/>
+
 ## Tech stack
 
 | Layer      | Technology                                             |
@@ -70,7 +122,8 @@ orca-marine-intelligence-assistant/
 │   ├── main.tsx
 │   └── types.ts
 ├── docs/
-│   └── architecture.md
+│   ├── architecture.md
+│   └── screenshots/          # images used in this README
 ├── .env.example
 ├── index.html
 ├── package.json
@@ -128,6 +181,17 @@ npm start
 | ----------------- | -------------------------------------------------------------------- |
 | `GET /api/health` | Server status and whether a Gemini key is configured                 |
 | `POST /api/chat`  | Sends a question plus live telemetry to Gemini; returns the reply, or `fallback: true` so the client uses the local engine |
+
+## Team AQUA-AGENTS
+
+| Name                 | Role                       |
+| -------------------- | -------------------------- |
+| Ambar Singh          | Team Leader                |
+| Aryan Chourasia      | Development                |
+| Shubham Kumar Yadav  | AI Integration             |
+| Aradhana Singh       | UI / UX                    |
+| Aditya Singh         | Research & Documentation   |
+| Gyanvi               | Deployment & Testing       |
 
 ## Documentation
 
