@@ -190,7 +190,7 @@ npm start
 | Aryan Chourasia      | Development                |
 | Shubham Kumar Yadav  | AI Integration             |
 | Aradhana Singh       | UI / UX                    |
-| Aditya Singh         | Research & Documentation   |
+| Aditya Mishra        | Research & Documentation   |
 | Gyanvi               | Deployment & Testing       |
 
 ## Documentation
